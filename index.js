@@ -19,6 +19,8 @@ const requireEnv = (name) => {
 // https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
 const GITHUB_ENV = requireEnv('GITHUB_ENV');
 
+const GITHUB_TOKEN = requireEnv('GITHUB_TOKEN');
+
 // The next 2 environment variables are automatically provided to custom
 // workflows like this one, but not to regular "run" steps. By writing these
 // variables to the GITHUB_ENV file, we make them available to the user's "run"
@@ -52,5 +54,6 @@ ACTIONS_CACHE_URL=${ACTIONS_CACHE_URL}
 ACTIONS_RUNTIME_TOKEN=${ACTIONS_RUNTIME_TOKEN}
 ACTIONS_RUNTIME_URL=${ACTIONS_RUNTIME_URL}
 ACTIONS_RESULTS_URL=${ACTIONS_RESULTS_URL}
+GITHUB_TOKEN=${GITHUB_TOKEN}
 `
 );
